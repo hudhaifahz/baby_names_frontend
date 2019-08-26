@@ -1,4 +1,4 @@
-function postName(session, name) {
+export function postName(session, name) {
 
     fetch(`http://localhost:3000/list/name`, {
         method: 'post',
@@ -29,7 +29,7 @@ function postName(session, name) {
 
 }
 
-async function getNames(id) {
+export async function getNames(id) {
 
     return await fetch(`http://localhost:3000/names/${id}`, {
         method: 'get',
@@ -37,8 +37,3 @@ async function getNames(id) {
     })
 
 }
-
-module.exports = {
-    postName,
-    getNames
-  }
