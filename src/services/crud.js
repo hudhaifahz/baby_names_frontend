@@ -1,6 +1,6 @@
 export function postName(session, name) {
 
-    fetch(`http://localhost:3000/list/name`, {
+    fetch(`http://commit-baby-names-frontend.herokuapp.com/list/name`, {
         method: 'post',
         body: JSON.stringify({
         "uuid": session,
@@ -31,7 +31,7 @@ export function postName(session, name) {
 
 export async function getNames(id) {
 
-    return await fetch(`http://localhost:3000/names/${id}`, {
+    return await fetch(`http://commit-baby-names-frontend.herokuapp.com/names/${id}`, {
         method: 'get',
         headers:{"Content-Type": "application/json"}
     })
