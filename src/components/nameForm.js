@@ -14,7 +14,7 @@ class NameForm extends React.Component {
     }
     
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
       var listid = localStorage.getItem("session")
       getNames(listid).then(res => {
         res.json().then( body => {
